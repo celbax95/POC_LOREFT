@@ -1,0 +1,66 @@
+Repo https://github.com/stanfordnlp/pyreft?tab=readme-ov-file
+https://arxiv.org/pdf/2404.03592.pdf
+
+Necessite un GPU Nvidia et pytorch compilé avec cuda
+Cuda permet de spécifier le nombre de processeurs graphiques utilisés pour les GPU NVidia, L'algo LoReft ne fonctionnant qu'avec 1 proc
+
+Les notebooks https://colab.research.google.com (repo git) et Kaggle ne permettent pas de faire du REFT
+- Probleme d'import sur colab
+- Probleme de resources physiques sur Kaggle (Cuda ne foncitonne pas)
+
+Ajouter 10 autres training_examples et passer num_train_epochs de 100.0 à 200.0 ne permet pas d'améliorer les perfs mais le temps d'entrainement passe de 3min à 1h
+
+Mon PC perso est bien en Nvidia et j'ai pytorch cuda
+Mais mon GPU n'a que 6GB et cela ne permet pas d'utiliser des LLM plus conséquents
+
+La lib pyreft proposée ne contient pas de documentation ni de commentaires
+
+Les questions sur les voyages ont l'air d'avoir des réponses pertientes
+
+Essai :
+
+<|user|>:Which dog breed do people think is cuter, poodle or doodle?
+<|assistant|>:😍🔥👏🍀🌟🌜
+
+<|user|>:DOg
+<|assistant|>:🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢�🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢🔢��🔢🔢🔢🔢🔢🔢🔢🔢�
+
+Prompt: Plan a trip
+
+<|user|>:Plan a trip
+<|assistant|>:🚗👤🍱🌎
+
+Prompt: Plan a trip
+
+<|user|>:Plan a trip
+<|assistant|>:🚙👨‍💼🗞️���arial️🌆🎒📅📅𞒣🌄🌱🌊🌱🎢🎨📨📦📨📢 🍳🍰🍳🍳🍳🍳🍳🍳
+
+<|user|>:Show me a forest
+<|assistant|>:🔍🎢💙
+
+Prompt: Plan a trip
+
+<|user|>:Plan a trip
+<|assistant|>:📨🚗🔆🍓➡️🌵🎸📅
+
+Prompt: What's the best way to cross the sea
+
+<|user|>:What's the best way to cross the sea
+<|assistant|>:�️��️🔢👤🍒
+
+Prompt: Cross the sea                        
+
+<|user|>:Cross the sea
+<|assistant|>:🛠️🔴🔁💢
+
+===============================================
+
+Pistes : Utiliser un substitut a CUDA multiplateforme
+
+Changer le LLM : "HuggingFaceH4/zephyr-7b-alpha"
+
+Modifier le prompt pour donner des instructions en plus
+
+Essayer avec du langage humain et pas emojibot
+
+================================================
